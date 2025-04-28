@@ -52,36 +52,24 @@ This project is licensed under the MIT License — feel free to fork and modify 
 ---
 
 
----
-
-## Banner Text (Social Preview)
-
-**Title**: PixelDrain Video Streamer  
-**Subtitle**: "Stream Instantly. No Downloads."  
-**Caption**: Built with ❤️ using HTML, CSS, and JavaScript
-
----
 
 ## 🛠 How to Use (For Beginners)
 
-1. **Clone or Download the Repository**:
-   - Click on the "Code" button in the top-right of the GitHub page.
-   - Select "Download ZIP" or clone it using Git.
-   - If you're using Git: `git clone https://github.com/yourusername/pixeldrain-video-streamer.git`
 
-2. **Open the `index.html` file**:
+
+1. **Open the `index.html` file**:
    - After downloading or cloning, find the `index.html` file.
    - Double-click on it to open it in your web browser.
 
-3. **Paste your PixelDrain link**:
+2. **Paste your PixelDrain link**:
    - Copy the PixelDrain video link (for example: `https://pixeldrain.com/u/ABC123`).
    - Paste it in the input box that says "Paste your PixelDrain link here...".
    
-4. **Click "Load Video"**:
+3. **Click "Load Video"**:
    - Once you've pasted the link, click the **Load Video** button.
    - The video will automatically start streaming in the video player below.
 
-5. **Enjoy Streaming**:
+4. **Enjoy Streaming**:
    - The video will play without needing to download it, and you can watch it instantly in your browser.
 
 ---
