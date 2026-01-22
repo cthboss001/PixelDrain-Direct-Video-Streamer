@@ -1,80 +1,48 @@
 # PixelDrain Direct Video Streamer
 
-A simple web tool to stream any video hosted on PixelDrain directly in your browser — without needing to download it first.
+![Version](https://img.shields.io/badge/version-1.0-blue)
+![Manager](https://img.shields.io/badge/manager-Tampermonkey-green)
 
-## ✨ Features
+A lightweight Userscript that automatically detects PixelDrain video pages and replaces the default interface with a direct, autoplaying HTML5 video player.
 
-- 🎬 Paste your PixelDrain link and start streaming immediately.
-- 🚀 Instant playback without any need for external players or downloads.
-- 🛠 Built entirely with pure HTML, CSS, and JavaScript — no frameworks.
-- 🔗 Direct API access to PixelDrain files.
-- 🎯 Lightweight and easy to deploy — perfect for personal use or quick demos.
+## 🚀 Features
 
-## 📋 Project Description
+* **Auto-Embed:** Automatically matches `pixeldrain.com/u/*` URLs and activates only on valid file pages.
+* **Direct API Streaming:** Extracts the file ID to construct a direct stream link (`/api/file/`), bypassing the standard viewer interface.
+* **Clean UI:** Injects a clean, responsive video player (max-width 720px) centered on the screen.
+* **Autoplay Enabled:** The video player is configured to `autoplay` immediately upon loading.
 
-This project solves a practical need:
-> "How can users watch videos stored on PixelDrain without downloading the full file?"
+## 📥 Installation
 
-PixelDrain provides simple file hosting but lacks a seamless streaming option for videos.  
-This tool makes it possible to fetch a video using PixelDrain’s public API and play it directly inside a browser video player.  
-No extra apps, no waiting for full downloads — just paste the link and press Play.
+You can install this script directly from this repository. You will need a userscript manager installed first.
 
-Ideal for:
-- Previewing large video files quickly.
-- Saving bandwidth by only streaming what you watch.
-- Using PixelDrain as a simple video server.
+### Step 1: Install a Userscript Manager
+* [Tampermonkey](https://www.tampermonkey.net/) (Recommended for Chrome/Edge/Safari)
+* [Violentmonkey](https://violentmonkey.github.io/) (Open Source, good for Firefox)
 
-## 📦 How It Works
+### Step 2: Install the Script
+Click the button below to install the script automatically:
 
-1. User pastes their PixelDrain file link.
-2. Script extracts the file ID.
-3. Constructs a direct API link like `https://pixeldrain.com/api/file/FILE_ID`.
-4. Loads that link into the browser’s `<video>` player.
-5. Video plays instantly using native HTML5 video streaming.
+[![Install Script](https://img.shields.io/badge/Install-Click_Here-success?style=for-the-badge&logo=tampermonkey)](https://github.com/cthboss001/PixelDrain-Direct-Video-Streamer/raw/main/script.user.js)
 
-## 🔥 Why This Is Useful
+*(If the button doesn't work, [click here](https://github.com/cthboss001/PixelDrain-Direct-Video-Streamer/raw/main/script.user.js) to view the raw code, and your extension should prompt you to install it.)*
 
-- Faster access to large video files.
-- No downloads means saving time and storage.
-- Zero backend needed — fully client-side.
-- Can be used for personal media servers, file previews, or quick project demos.
+## 🛠️ Manual Installation
 
-## 🛠 Tech Stack
+If the direct link does not work:
+1.  Click the **Userscript Manager** extension icon in your browser.
+2.  Select **"Create a new script"**.
+3.  Delete any default code in the editor.
+4.  Copy the full content of `script.user.js` from this repository.
+5.  Paste it into the editor and hit **Save** (Ctrl+S).
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
+## 📖 How it Works
 
-## 📜 License
+1.  The script runs exclusively on `https://pixeldrain.com/u/*`.
+2.  It captures the alphanumeric **File ID** from the URL.
+3.  It constructs a direct source link: `https://pixeldrain.com/api/file/{id}`.
+4.  The script replaces the entire `document.documentElement.innerHTML` with a custom HTML structure containing a simple `<video>` tag.
 
-This project is licensed under the MIT License — feel free to fork and modify it for your own use!
+## ⚠️ Disclaimer
 
----
-
-
-
-## 🛠 How to Use (For Beginners)
-
-
-
-1. **Open the `index.html` file**:
-   - After downloading or cloning, find the `index.html` file.
-   - Double-click on it to open it in your web browser.
-
-2. **Paste your PixelDrain link**:
-   - Copy the PixelDrain video link (for example: `https://pixeldrain.com/u/ABC123`).
-   - Paste it in the input box that says "Paste your PixelDrain link here...".
-   
-3. **Click "Load Video"**:
-   - Once you've pasted the link, click the **Load Video** button.
-   - The video will automatically start streaming in the video player below.
-
-4. **Enjoy Streaming**:
-   - The video will play without needing to download it, and you can watch it instantly in your browser.
-
----
-
-This tool works on **any modern web browser**, so you don't need to install anything extra. Just make sure you have an active internet connection, and you’re good to go!
-
-
-
+This script is for educational purposes only. Please respect the terms of service of any website you visit.
